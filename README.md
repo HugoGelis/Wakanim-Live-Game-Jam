@@ -1,5 +1,7 @@
 # Wakanim Live Game Jam
 
+[![Video](http://img.youtube.com/vi/h9oPsSUe_ng/0.jpg)](http://www.youtube.com/watch?v=h9oPsSUe_ng)
+
 ## Introduction
 
 La Wakanim Live Game Jam, c'est une game jam **ouverte à tous**.  
@@ -18,7 +20,7 @@ Il y aura aussi des cadeaux pour les meilleurs contributeurs ! DVDs, Blu-rays, T
 ## Le thème
 
 Dans une game jam, il y a toujours un thème imposé.  
-On le définira pendant le Wakanim Live #3, alors soyez au rendez-vous pour lancer vos idées dans le chat du live !
+On le définira pendant le [Wakanim Live #3](https://www.youtube.com/watch?v=h9oPsSUe_ng), alors soyez au rendez-vous pour lancer vos idées dans le chat du live !
 
 ## La deadline
 
