@@ -53,7 +53,7 @@ Il s'agit d'un outil très versatile que certains utilisent même comme [éditeu
 
 
 ### GitHub : le partage de code
-[Site](https://github.com/) [Téléchargement (Windows)](https://windows.github.com/ ) | [Téléchargement (Mac)](https://mac.github.com/) | sudo apt-get install git (Hard mode en ligne de commande pour Linux)
+[Site](https://github.com/) | [Téléchargement (Windows)](https://windows.github.com/ ) | [Téléchargement (Mac)](https://mac.github.com/) | sudo apt-get install git (Hard mode en ligne de commande pour Linux)
 
 Git, c'est le truc qui rend le développement simple mais qui n'est pas facile à appréhender.  
 Avec GitHub, on va pouvoir partager à tous les fichiers de développement du jeu.  
