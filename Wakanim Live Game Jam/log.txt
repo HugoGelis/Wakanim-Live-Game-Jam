@@ -1,25 +1,25 @@
-Fri Jun 19 17:29:15 2015
+Fri Jun 19 17:46:19 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.4.467
  
 
-Bootstrap to the start of init.init took 0.24s
-Early init took 0.07s
-Loader init took 0.13s
+Bootstrap to the start of init.init took 0.23s
+Early init took 0.06s
+Loader init took 0.11s
 Loading error handling took 0.16s
-Loading script took 0.32s
-Loading persistent took 0.02s
+Loading script took 0.45s
+Loading persistent took 0.03s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.28s
+Running init code took 0.39s
 Analyze and compile ATL took 0.03s
-Index archives took 0.10s
-Cleaning cache took 0.17s
+Index archives took 0.08s
+Cleaning cache took 0.12s
 Making clean stores took 0.00s
-Creating interface object took 0.13s
+Creating interface object took 0.12s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Prepare screens took 0.46s
+Prepare screens took 0.37s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -31,7 +31,7 @@ ImportError: DLL load failed: Le module spécifié est introuvable.
 Unknown renderer: angle
 
 Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(734, 550)
+Screen sizes: virtual=(800, 600) physical=(733, 550)
 Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 4400'
 Version: '4.2.0 - Build 10.18.10.3412'
@@ -217,13 +217,13 @@ Texture testing:
 - 2048px textures work.
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.052000 seconds.
-- Frame drawn at 0.072000 seconds.
-- Frame drawn at 0.088000 seconds.
-- Frame drawn at 0.106000 seconds.
-- 0.106000 seconds to render 5 frames.
+- Frame drawn at 0.039000 seconds.
+- Frame drawn at 0.061000 seconds.
+- Frame drawn at 0.078000 seconds.
+- Frame drawn at 0.094000 seconds.
+- 0.094000 seconds to render 5 frames.
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Prepare screens took 0.36s
+Prepare screens took 0.32s
 Running _start took 0.00s

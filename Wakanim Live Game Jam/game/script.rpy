@@ -13,27 +13,33 @@ label start:
     scene bg cheum
     show Wakalive moche
 
-    Wakalive "Faisons-nous plutôt une romance avec des monstres géants ? Ou plutôt un jeu de community management de combat ?"
-
-    "Public" "Nous allons répondre !"
+    Wakalive "Mais quel monstre géant allons-nous séduire ?"
+    
+    "2255 des magical-kaiju combattent le roi des troll. ce roi n'est autre que Tsundere un jeune troll  héritier du trône qui n'avait que pour projet de crée un shojo manga  en s'inspirant de kaiju mécas"
     
 menu:
-    "On aime les monstres !":
-        jump kaiju
+    "Le kaiju magical girl !":
+        jump magicalgirl
         
-    "On aime pas les trolls !":
-        jump troll
+    "Le mecha kaiju !":
+        jump mecha
         
-label kaiju:
-    "Public" "Allez, on va séduire des kaiju !"
-    
-    Wakalive "Mais c'est une super idée !"
+    "Le kaiju tsundere !":
+        jump tsundere
+        
+label magicalgirl:
+    " il était une fois, un joli petit kaiju tout triste parce qu'il se faisait martyriser par de méchants trolls mais un jour un kaiju Magicalgirl arriva et le réconforta, ce fut le début d'une jolie romance"
 
 return
     
-label troll:
-    "Public" "Bouh les trolls ils sont trop méchants !"
+label tsundere:
     
-    Wakalive "D'accord, d'accord, prenez vos perches, ça va barder !"
-
+    "J... j'ai pas détruit la ville parce que je t'aime..."
+    
+    return
+    
+label mecha:
+    
+    "Bip Bip Boum Boum."
+    
     return
