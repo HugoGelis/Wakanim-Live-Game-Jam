@@ -46,7 +46,7 @@ Ren'py est le moteur utilisé pour de nombreux jeux dont [fault milestone one](h
 
 Ren'py embarque par défaut un éditeur de code tout à fait correct, mais j'ai une certaine préférence pour Notepad++.  
 Notepad++ est une version avancée du bloc notes que l'on retrouve sur n'importe quel ordinateur.  
-Quelques réglages sont nécessaires pour qu'il détecte automatiquement les fichiers .rpy.  
+Quelques réglages sont nécessaires pour qu'il détecte automatiquement les fichiers .rpy utilisés par Ren'py.  
 Il s'agit d'un outil très versatile que certains utilisent même comme [éditeur de texte](http://izual.org/ak/).
 
 
