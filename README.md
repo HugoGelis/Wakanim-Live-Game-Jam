@@ -1,6 +1,6 @@
 # Wakanim Live Game Jam
 
-**/!\ Toutes les personnes souhaitant participer à ce projet doivent envoyer un mail à hugo[arobase]wakanim[point]tv avec leur nom d'utilisateur GitHub afin de pouvoir contribuer sur le dépôt ! /!\**
+**/!\ Toutes les personnes souhaitant participer doivent être ajoutées en contributeurs sur le dépôt ! Pour celà, envoyez un un mail à hugo[arobase]wakanim[point]tv avec votre nom d'utilisateur GitHub ! /!\**
 
 [![Video](http://img.youtube.com/vi/h9oPsSUe_ng/0.jpg)](http://www.youtube.com/watch?v=h9oPsSUe_ng)
 
@@ -19,7 +19,7 @@ Le but de ce live, c'est de vous convaincre que *n'importe qui peut faire un jeu
 Ce ne sera pas un AAA, pas un Call of Duty ni un Final Fantasy, mais ça sera quand même *votre jeu*.  
 Il y aura aussi des cadeaux pour les meilleurs contributeurs ! DVDs, Blu-rays, T-shirts et autres goodies seront offerts aux participants nous ayant les plus impressionnés en écrivant, codant, dessinant, sonorisant, conseillant...
 
-**/!\ Toutes les personnes souhaitant participer à ce projet doivent envoyer un mail à hugo[arobase]wakanim[point]tv avec leur nom d'utilisateur GitHub afin de pouvoir contribuer sur le dépôt ! /!\**
+**/!\ Toutes les personnes souhaitant participer doivent être ajoutées en contributeurs sur le dépôt ! Pour celà, envoyez un un mail à hugo[arobase]wakanim[point]tv avec votre nom d'utilisateur GitHub ! /!\**
 
 ## Le thème
 
@@ -64,7 +64,7 @@ Avec GitHub, on va pouvoir partager à tous les fichiers de développement du je
 Faites-vous un compte sur le site pour pouvoir contribuer au projet !
 Je tenterai d'expliquer rapidement les bases du site et du logiciel lors du Wakanim Live #3, mais n'hésitez pas à poser des questions dès que vous en avez.
 
-**/!\ Toutes les personnes souhaitant participer à ce projet doivent envoyer un mail à hugo[arobase]wakanim[point]tv avec leur nom d'utilisateur GitHub afin de pouvoir contribuer sur le dépôt ! /!\**
+**/!\ Toutes les personnes souhaitant participer doivent être ajoutées en contributeurs sur le dépôt ! Pour celà, envoyez un un mail à hugo[arobase]wakanim[point]tv avec votre nom d'utilisateur GitHub ! /!\**
 
 ### Gimp : le graphisme sans Photoshop
 [Site officiel](http://www.gimp.org/) | [Téléchargement](http://www.gimp.org/downloads/)
