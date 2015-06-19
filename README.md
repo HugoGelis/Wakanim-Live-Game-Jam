@@ -77,7 +77,7 @@ Là encore, les experts utilisent sûrement autre chose, mais Audacity reste un 
 ### Hexchat : la discussion IRC
 [Site officiel](https://hexchat.github.io/) | [Téléchargement (Windows/Mac/Linux)](https://hexchat.github.io/downloads.html)
 
-Pour tous ceux qui veulent discuter du développement du jeu, vous pouvez nous rejoindre sur le chan IRC de Wakanim à l'adresse suivante : irc.otaku-irc.fr/6667
+Pour tous ceux qui veulent discuter du développement du jeu, vous pouvez nous rejoindre sur le chan IRC de Wakanim à l'adresse suivante : irc.otaku-irc.fr/6667 : #Wakanim.  
 J'y serai disponible 35h/semaine, alors n'hésitez pas à vous y connecter si vous avez une question.
 
 **WAKANIM LIVE GAME JAM**  
