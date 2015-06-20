@@ -1,5 +1,8 @@
 # Wakanim Live Game Jam
 
+**Thème : une romance avec des kaiju (monstres géants type Godzilla)
+Deadline : 7 juillet 2015**
+
 **/!\ Toutes les personnes souhaitant participer doivent être ajoutées en contributeurs sur le dépôt ! Pour celà, envoyez un un mail à hugo[arobase]wakanim[point]tv avec votre nom d'utilisateur GitHub ! /!\**
 
 [![Video](http://img.youtube.com/vi/h9oPsSUe_ng/0.jpg)](http://www.youtube.com/watch?v=h9oPsSUe_ng)
@@ -24,7 +27,7 @@ Il y aura aussi des cadeaux pour les meilleurs contributeurs ! DVDs, Blu-rays, T
 ## Le thème
 
 Dans une game jam, il y a toujours un thème imposé.  
-On le définira pendant le [Wakanim Live #3](https://www.youtube.com/watch?v=h9oPsSUe_ng), alors soyez au rendez-vous pour lancer vos idées dans le chat du live !
+Il a été défini pendant le [Wakanim Live #3](https://www.youtube.com/watch?v=h9oPsSUe_ng) : ce sera **un dating sim avec des kaiju**. En français ? **Une romance avec des monstres géants type Godzilla**. Pensez Pacific Rim version "dites-le avec des fleurs".
 
 ## La deadline
 
