@@ -1,7 +1,7 @@
 # Wakanim Live Game Jam
 
-**Thème : une romance avec des kaiju (monstres géants type Godzilla)
-Deadline : 7 juillet 2015**
+*Thème : une romance avec des kaiju (monstres géants type Godzilla)  
+Deadline : 7 juillet 2015*
 
 **/!\ Toutes les personnes souhaitant participer doivent être ajoutées en contributeurs sur le dépôt ! Pour celà, envoyez un un mail à hugo[arobase]wakanim[point]tv avec votre nom d'utilisateur GitHub ! /!\**
 
