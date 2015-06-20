@@ -15,7 +15,7 @@ label start:
 
     Wakalive "Mais quel monstre géant allons-nous séduire ?"
     
-    "2255 des magical-kaiju combattent le roi des troll. ce roi n'est autre que Tsundere un jeune troll  héritier du trône qui n'avait que pour projet de crée un shojo manga  en s'inspirant de kaiju mécas"
+    "2255 des kaiju combattent le roi des troll. ce roi n'est autre que Tsundere un jeune troll héritier du trône qui veut transformer le monde en shojo manga"
     
 menu:
     "Le kaiju magical girl !":
@@ -27,10 +27,14 @@ menu:
     "Le kaiju tsundere !":
         jump tsundere
         
+    "Le kaiju troll !":
+        jump troll
+        
 label magicalgirl:
-    " il était une fois, un joli petit kaiju tout triste parce qu'il se faisait martyriser par de méchants trolls mais un jour un kaiju Magicalgirl arriva et le réconforta, ce fut le début d'une jolie romance"
-
-return
+    
+    "Notre héros (héroïne) est attaqué(e) par les trolls ! Il(elle) se fait martyriser tous les jours au lycée. Un jour, le kaiju magical girl arrive et le (la) réconforte(a). C'est le début d'une belle histoire..."
+    
+    return
     
 label tsundere:
     
@@ -41,5 +45,11 @@ label tsundere:
 label mecha:
     
     "Bip Bip Boum Boum."
+    
+    return
+    
+label troll:
+    
+    "Je suis un troll mais pas comme les méchants ! Je ne suis pas un infiltré !"
     
     return
