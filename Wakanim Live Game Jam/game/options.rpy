@@ -16,17 +16,17 @@ init -1 python hide:
 
     ## Contrôle la largeur et la hauteur de la fenêtre.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1280
+    config.screen_height = 720
 
     ## Titre de la fenêtre (lorsque le jeu se fait en mode fenêtré).
 
-    config.window_title = u"Wakanim Live Game Jam"
+    config.window_title = u"Kawaii Kaiju Love Love"
 
     ## Contrôle le nom et la version du jeu; qui apparaîtront dans les
     ## fichiers de débogage.
     config.name = "Wakanim Live Game Jam"
-    config.version = "0.0"
+    config.version = "0.1"
 
     #########################################
     ## Thèmes
@@ -276,7 +276,7 @@ init -1 python hide:
     ## Vitesse par défaut en nombre de caractères par seconde.
     ## Mettez 0 pour l'infini.
 
-    config.default_text_cps = 0
+    config.default_text_cps = 25
 
     ## Temps par défaut pour l'avancement automatique.
 

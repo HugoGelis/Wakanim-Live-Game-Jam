@@ -1,0 +1,21 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 45, in script
+    magical "lalala"
+Exception: Sayer 'magical' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 45, in script
+    magical "lalala"
+  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\ast.py", line 573, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\ast.py", line 491, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'magical' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.4.467
+Wakanim Live Game Jam 0.1
