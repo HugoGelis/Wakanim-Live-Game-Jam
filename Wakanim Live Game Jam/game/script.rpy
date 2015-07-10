@@ -8,7 +8,7 @@ image bg cheum = "images/fond.png"
 # Déclarez les personnages utilisés dans le jeu.
 define JP = Character('[player_name]', color="#17c9aa")
 define Magical = Character('Manaka', color="#e81ae1")
-define Mecha = Character('Marcel', color="#8c8181")
+define Mecha = Character('Motoko', color="#8c8181")
 
 label spashscreen:
     show logo wakalive
@@ -60,7 +60,7 @@ label start:
     
     "Le troll ne court qu'à sa perte lorsqu'il attaque le plat du pied de Manaka la magical kaiju girl. Il ne reste alors de l'immonde personnage qu'un petit tas de paillettes."
     
-    "Manaka se tourna alors vers moi."
+    "Manaka se tourne alors vers moi."
     
     Magical "Ouf, tu es sain et sauf. Comment vas-tu ?"
     
@@ -96,9 +96,9 @@ label start:
     
 menu:
     Magical "Veux-tu que je t'accompagne jusqu'au lycée ?"
-    "Assurément":
+    "Assurément !":
         jump yep
-    "N... Non, je peux très bien me débrouiller tout seul. ":
+    "N... Non, je peux très bien me débrouiller tout seul.":
         jump nope
         
 label yep:
@@ -118,53 +118,146 @@ label highschool:
     
     "La classe" "BROUHAHA. BROUHAHA."
     
-    Mecha ""
-
-    "présente une arme pour se défendre contre les kaiju"
-    "J... j'ai pas détruit la ville parce que je t'aime..."
-    "Je suis un troll mais pas comme les méchants ! Je ne suis pas un infiltré !"
+    "Monsieur Marcel" "Au travail, bande de moules ! Pour le TP d'aujourd'hui, on va plancher sur une arme pour se défendre contre les trolls.{p}Rappelez-vous, le second amendement existe uniquement pour {b}votre{/b} sécurité !"
     
+    "Nous nous mettons au travail derechef. Je fais équipe avec Jean-Claude, Jean-Paul et Jeanne-Michelle...{p}Mais dois rapidement travailler seul lorsqu'une mauvaise manipulation de la pile nucléaire irradie mes trois camarades."
+    
+    "Monsieur Marcel" "Mais c'est du beau boulot ça dis donc [player_name] !"
+    
+    JP "Merci m'sieur. Je n'en suis pas peu fier ! Un mech kaiju, ça c'est un beau TP !"
+    
+    "Monsieur Marcel" "Eh bien il va être temps de l'allumer, ce maudit bestiau."
+    
+    "Je m'exécute et pèse sur le piton."
+    
+    "Rise and shine!" with vpunch
+    
+    "Monsieur Marcel" "Non pas le plafond enfin !" with hpunch
+    
+    "Le mecha kaiju se dresse de toute sa hauteur, défonçant le toit de la salle de TP (pourtant prévue pour accueillir humains et kaiju) au passage. Quel désastre !"
+    
+    Mecha "Mais quelle camelote ce truc, c'est fait en carton ou quoi ?"
+    
+    "Le mecha a parlé.{p}Ou plutôt, il a attaqué en réponse à l'agression du bâtiment trop petit.{p}Pour combattre des monstres - les trolls - nous créons des monstres.{p}Ce mecha kaiju est équipé des mêmes armes que nos ennemis : un canon à insultes photoniques, une batterie de missiles à susceptibilité chercheuse et même un rayon rageur.{p}Face à une telle machine de terreur, les trolls adverses n'ont aucune chance."
+    
+    Mecha "Oh, c'est vous, Maître."
+    
+    "Le mecha kaiju m'a remarqué. Il sait déjà que c'est moi qui l'ai construit car j'ai effacé de sa mémoire les profils de mes autres camarades qui m'ont lâchement abandonné en cours de TP pour cause de bubons atomiques... Pff... Bande de nazes."
+    
+    Mecha "Maître, qui suis-je ?"
+    
+    JP "(Est-il en train de se poser des questions existentielles dès maintenant ou bien... Oh !){p}C'est ton nom que tu demandes, est-ce bien ça ?"
+    
+    Mecha "Oui, Maître."
+    
+    JP "C'est...{p}Écrit juste au dessus de ta boîte de dialogue. Tu devrais le savoir pourtant, c'est toi qui a brisé le quatrième mur, {b}Motoko{/b} !"
+    
+    Mecha "Mes excuses, Maître. Voyez-vous, moi, je n'essaie pas de compenser la mort de mes parents en essayant de devenir un playboy millionnaire, aussi génial qu'il est talentueux."
+    
+    "J'ai un mouvement de recul instinctif face à tant de vilénie. Le malotru a osé me viser de ses armes de troll anti-troll !"
+    
+    JP "(Damned, le félon a touché juste avec son insulte ! Me voilà fort marri !)"
+    
+    JP "Ce... C'est... Même pas vrai ! D'abord !"
+    
+    Mecha "Oh mince, je crois que je vous ai blessé. Veuillez m'excuser, Maître."
+    
+    "D'un revers de queue, Motoko balaie un bâtiment situé un peu plus loin.{p}C'est (c'était) l'hôpital des adultes, de tous ceux qui survivent à peine à la post-apocalypse parce qu'ils ne sont plus de fringuants lycéens."
+    
+    Mecha "Oh, l'hôpital des adultes est détruit ! Désormais, personne dans le lycée ne pourra être plus heureux que vous car tous vos camarades sont désormais orphelins...{p}M... Mais...{p}Que ce soit bien clair entre nous...{p}J... Je...{p}Je fais pas ça parce que je vous apprécie !"
     
 menu:
-    Mecha "Bip Bip Boum Boum."
-    "amour":
+    Mecha "J... Je n'ai pas fait ça pour vous, Maître..."
+    "Quelle pudeur, c'est admirable !":
         jump ouais
-    "damnation":
+    "Mais, tu te fous de moi !":
         jump nan
         
 label ouais:
-$ mecha_love = "True"
+    $ mecha_love = "True"
+    
+    JP "Même si tu ne l'avoues pas, j'apprécie ton geste. Il faut beaucoup de courage pour tuer autant de gens {cps=10}- qui plus est des innocents et des malades -{/cps} tout ça rien que pour le bonheur d'une seule personne."
+    
+    "Les joues du mecha chauffent à blanc. C'est sûrement comme ça que les machines rougissent."
+    
+    Mecha "I... Idiot* !{p}{i}*Lire : \"Baka\".{/i}"
+    
+    JB "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
+    
+    jump lunch
 
 label nan:
-
+    JP "Non seulement tu trolles, mais en plus tu n'es qu'une sale tsundere !" with hpunch
+    
+    JP "Assume tes actions au lieu de te cacher derrière un stéréotype éculé !" with hpunch
+    
+    JP "Tu ne vaux pas mieux que ces trolls contre lesquels tu es censé te battre !" with hpunch
+    
+    Mecha "I... Idiot* !{p}{i}*Lire : \"Baka\".{/i}"
+    
     jump lunch
 
 label lunch:
-    "youpi banane"
+    "Après ce cours de techno qui ne fut pas de tout repos arrive enfin l'heure du déjeuner."
+    
+    JP "(Enfin un peu de tranquillité...)"
+    
+    "BOUM BOUM PAN PAN WIZZZZZ BIP BADABANG" with vpunch
+    
+    JP "Mais qu'est-ce que c'est que ce vacarme ?!"
+    
+    "BADABANG PAM BOUM BOUM PATAPRO" with vpunch
+    
+    "De l'autre côté de la cour du lycée se déroule un combat de titans. Deux kaiju se castagnent tandis qu'à leur pied, quelques élèves humains s'échangent des barres ChocoTipTop® en guise de paris."
+    
+    "Mais, je reconnais ces titans !"
+    
+    JP "Manaka ! Motoko ! Qu'est-ce que vous faites ?"
+    
+    "La magical kaiju girl rencontrée ce matin et le mecha kaiju construit la même demi-journée s'échangent des mandales sans courtoisie aucune et ne semblent pas m'entendre."
+    
+    Magical ""
+    
+    Mecha "Je suis un troll mais pas comme les méchants ! Je ne suis pas un infiltré !"
+    
 menu:
-    JP "c'est l'heure du choix"
-    "l'un" if magical_love == "True":
+    JP "Mon cœur est tiraillé... Qui vais-je choisir ?"
+    "Manaka la magical kaiju girl..." if magical_love == "True":
         jump magicalend
-    "l'autre" if mecha_love == "True":
+    "Motoko le mecha kaiju..." if mecha_love == "True":
         jump mechaend
-    "solitude":
+    "Je préfère partir plutôt que de voir ça plutôt que d'être aveugle.":
         jump badend
     
 label magicalend:
-    "kapoué ?"
+    "les mechas c'est trop nul, rien ne vaut le pouvoir de la tarte tropézienne"
     jump generique
 
 label mechaend:
-    "kapoué !"
+    "on va remplacer les magical par des mechas, combattre les monstres avec des monstres"
     jump generique
     
 label badend:
-    "kapoué"
+    JP "Ah mais... Je suis tout seul en fait."
+    
+    JP "C'est nul."
+    
+    JP "Je m'ennuie déjà."
+    
+    JP "Ça serait chouette si je pouvais recommencer... Ou même réécrire toute l'histoire..."
+    
+    JP "Si seulement j'avais de quoi changer le code de cette réalité en open source..."
+    
     jump generique
     
-
-    
 label generique:
-    "Bravo, t'as gagné !"
+    show logo wakalive
+
+    "Ce jeu a été réalisé dans le cadre d'une initiative de Wakanim Live pour montrer que tout le monde peut faire des jeux vidéo.{p}Qu'ils soit simples, stupides ou moches, c'est pas si dur de créer des trucs.{p}Alors prenez-vos dix doigts, ceux de vos copains et faisez des machins !"
     
-    "Ce jeu a été réalisé dans le cadre d'une initiative de Wakanim Live pour montrer que tout le monde peut faire des jeux vidéo. Qu'ils soit simples, stupides ou moches, c'est pas si dur d'en faire."
+    "Coupable : {a=https://twitter.com/hugo_gelis}Hugo Gelis{/a}{p}Page du projet sur GitHub : {a=https://github.com/HugoGelis/Wakanim-Live-Game-Jam}https://github.com/HugoGelis/Wakanim-Live-Game-Jam{/a}{p}Merci à Ben, Seiko Ralie, Joystickman et Marc-Antoine pour les bonnes idées lancées pendant le {a=https://www.youtube.com/watch?v=h9oPsSUe_ng}Wakanim Live #3{/a} !"
+    
+    "Merci d'avoir testé ce petit jeu, et à la prochaine sur {a=http://www.wakanim.tv/}Wakanim.TV{a} !"
+    
+    "#bagarre{p}★~FIN~★"
+    return

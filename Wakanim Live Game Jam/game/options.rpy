@@ -12,7 +12,7 @@ init -1 python hide:
     ## du jeu, ainsi le joueur ne peut pas tricher en utilisant les
     ## outils pour développeur.
 
-    config.developer = True
+    config.developer = False
 
     ## Contrôle la largeur et la hauteur de la fenêtre.
 
@@ -79,7 +79,7 @@ init -1 python hide:
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
-        rounded_window = False,
+        rounded_window = True,
 
         ## And we're done with the theme. The theme will customize
         ## various styles, so if we want to change them, we should
@@ -156,11 +156,11 @@ init -1 python hide:
 
     ## Mettez cette option à False pour désactiver les sons.
 
-    config.has_sound = True
+    config.has_sound = False
 
     ## Mettez cette option à False si le jeu n'a pas de musique.
 
-    config.has_music = True
+    config.has_music = False
 
     ## Mettez cette option à True si le jeu contient des voix.
 
