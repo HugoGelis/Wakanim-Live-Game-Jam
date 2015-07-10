@@ -1,27 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 142, in script
-    menu:
-  File "game/script.rpy", line 144, in <module>
-    "l'un" if magical_love == "True":
-NameError: name 'magical_love' is not defined
+  File "game/script.rpy", line 203, in script
+    JB "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
+Exception: Sayer 'JB' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 142, in script
-    menu:
-  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\ast.py", line 1411, in execute
-    choice = renpy.exports.menu(choices, self.set)
-  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\exports.py", line 714, in menu
-    if renpy.python.py_eval(condition) ]
-  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\python.py", line 1482, in py_eval
-    return eval(py_compile(source, 'eval'), globals, locals)
-  File "game/script.rpy", line 144, in <module>
-    "l'un" if magical_love == "True":
-NameError: name 'magical_love' is not defined
+  File "game/script.rpy", line 203, in script
+    JB "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
+  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\ast.py", line 573, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Olivier\Desktop\renpy-6.99.4-sdk\renpy\ast.py", line 491, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'JB' is not defined.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.4.467
-Wakanim Live Game Jam 0.1
+WakanimLiveGameJam 0.1

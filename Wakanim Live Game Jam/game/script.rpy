@@ -3,7 +3,11 @@
 # Déclarez sous cette ligne les images, avec l'instruction 'image'
 image logo wakalive = "images/logowakalive.png"
 image Wakalive moche = "images/wakalive.png"
-image bg cheum = "images/fond.png"
+image bg endoftheworld = "images/endoftheworld.png"
+image bg route = "images/route.png"
+image bg classe = "images/classe.png"
+image bg cour = "images/cour.png"
+image kaiju magical = "images/magical.png"
 
 # Déclarez les personnages utilisés dans le jeu.
 define JP = Character('[player_name]', color="#17c9aa")
@@ -22,13 +26,16 @@ label start:
     $ magical_love = "False"
     $ mecha_love = "False"
 
+    show bg endoftheworld
+    
     "En 2255, la Terre est menacée par l'armée du Roi des Trolls.{p}Le nouvel allié de l'humanité dans cette épreuve est des plus surprenants...{p}Personne n'aurait cru qu'après avoir détruit nos villes, mangé nos soldats et atomisé nos vies, ils se dresseraient maintenant face à nos ennemis...{p}Pour nous protéger..."
     
     "...{p}Les kaiju.{p}(Sans \"s\" parce que les mots japonais sont invariables, tudieu.)"
     
     "Ces monstres géants, terreurs de la nature sorties du fond des temps pour venir nous rappeler nos erreurs à coup de pattes dans les grands rues...{p}Ils sont maintenant nos camarades. Godzilla, Gamera et même Mothra font partie des nôtres.{p}Plus destructeurs que des tsunamis, leur fureur se déchaînera sur nos ennemis...{p}Mais seulement après l'heure du thé et des gâteaux."
     
-    #transition
+    show bg route
+    with dissolve
     
     "Moi, je ne suis qu'un simple lycéen. Aujourd'hui, comme tous les jours, je vais en cours en faisant attention de ne pas me prendre les pieds dans les débris d'immeubles et les carcasses putréfiées."
     
@@ -45,6 +52,9 @@ label start:
     "!!!{p}Mon popotin est déjà tout endolori de la chute surprise provoquée par ce malotru, comment vais-je me sortir ce ce traquenard ?!"
     
     "Troll péon" "C'est le plan de notre Roi Tsundere ! En attaquant ta virilité et ton estime de soi, je vais te transformer en cliché de mauvais soujo manga ! Tu ne seras que doute et te vautreras dans les clichés éculés d'une romance aliénante et avilissante !"
+    
+    show kaiju magical
+    with dissolve
     
     Magical "Halte là, gredin ! Par le pouvoir de la tarte tropézienne, je ne te laisserai pas salir la dignité de ce monde !"
     
@@ -104,9 +114,13 @@ menu:
 label yep:
     Magical "Super !{p}Oh, il est déjà si tard ! Vite, hâtons nous pour ne pas être en retard en cours !"
     $ magical_love = "True"
+    hide kaiju magical
     jump highschool
 
 label nope:
+
+    hide kaiju magical
+    
     JP "(Damnation ! Cette réponse ! C'est une réplique digne d'une tsundere ! Ce maudit troll aurait-il réussit à me décontenancer ?)"
     
     "Je marche seul jusqu'au lycée, en me rongeant sang et ongles."
@@ -114,6 +128,10 @@ label nope:
     jump highschool
     
 label highschool:
+
+    show bg classe
+    with dissolve
+    
     "Ce matin, nous avons cours de technologie avec Monsieur Marcel."
     
     "La classe" "BROUHAHA. BROUHAHA."
@@ -182,7 +200,7 @@ label ouais:
     
     Mecha "I... Idiot* !{p}{i}*Lire : \"Baka\".{/i}"
     
-    JB "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
+    JP "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
     
     jump lunch
 
@@ -198,6 +216,10 @@ label nan:
     jump lunch
 
 label lunch:
+
+    show bg cour
+    with dissolve
+
     "Après ce cours de techno qui ne fut pas de tout repos arrive enfin l'heure du déjeuner."
     
     JP "(Enfin un peu de tranquillité...)"
@@ -212,13 +234,29 @@ label lunch:
     
     "Mais, je reconnais ces titans !"
     
+    show kaiju magical
+    
     JP "Manaka ! Motoko ! Qu'est-ce que vous faites ?"
     
     "La magical kaiju girl rencontrée ce matin et le mecha kaiju construit la même demi-journée s'échangent des mandales sans courtoisie aucune et ne semblent pas m'entendre."
     
-    Magical ""
+    Magical "Par le pouvoir de la tarte tropézienne ! Vil troll, je vais te punir !"
     
-    Mecha "Je suis un troll mais pas comme les méchants ! Je ne suis pas un infiltré !"
+    Mecha "Mais enfin, il y a méprise ! Je ne suis pas un troll !"
+    
+    Magical "Ton vocabulaire est pourtant aussi disgracieux que celui de ces êtres répugnants ! Tu es des leurs, et subiras alors mon courroux !"
+    
+    Mecha "Je trolle mais pour le bien de tous ! Il s'agit d'une arme que je ne veux pas employer sur vous ! Mais si vous m'y obligez..."
+    
+    JP "{b}CESSEZ !{/b}{p}Vous vous enguirlandez pour des prunes !" with vpunch
+    
+    Magical "[player_name] ! Tu as raison ! Notre bataille est stérile !"
+    
+    Mecha "Maître, vous détenez la vérité."
+    
+    Magical "Mais il va te falloir choisir..."
+    
+    Mecha "Qui de moi ou elle préférez-vous ?"
     
 menu:
     JP "Mon cœur est tiraillé... Qui vais-je choisir ?"
@@ -230,14 +268,23 @@ menu:
         jump badend
     
 label magicalend:
-    "les mechas c'est trop nul, rien ne vaut le pouvoir de la tarte tropézienne"
+    
+    "En vrai, les mechas, c'est trop nul et rien ne vaut le pouvoir magique de la tarte tropézienne."
+    
     jump generique
 
 label mechaend:
-    "on va remplacer les magical par des mechas, combattre les monstres avec des monstres"
+    
+    hide kaiju magical
+    
+    "La technologie c'est l'avenir ! On va remplacer toutes les magical girls par des mechas et botter le popotin de l'apocalypse des monstres avec d'autres monstres !"
+    
     jump generique
     
 label badend:
+    
+    hide kaiju magical
+    
     JP "Ah mais... Je suis tout seul en fait."
     
     JP "C'est nul."
