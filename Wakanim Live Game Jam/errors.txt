@@ -2,8 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 181: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    jump lunch
-    ^
+File "game/script.rpy", line 86: screen expects a non-empty block.
+    screen input_screen():
+                          ^
+
+File "game/script.rpy", line 87: expected statement.
+    window:
+          ^
 
 Ren'Py Version: Ren'Py 6.99.4.467

@@ -38,48 +38,48 @@ init -1 python hide:
     ## La fonction prend un certain nombre de paramètres pour
     ## personnaliser le thème
 
-    theme.diamond(
-        ## Theme: Diamond
-        ## Color scheme: Colorblind
+    theme.roundrect(
+        ## Theme: Roundrect
+        ## Color scheme: Phone Operator
 
         ## The color of an idle widget face.
-        widget = "#898989",
+        widget = "#59667a",
 
         ## The color of a focused widget face.
-        widget_hover = "#464646",
+        widget_hover = "#343e4d",
 
         ## The color of the text in a widget.
-        widget_text = "#CCCCCC",
+        widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#F2F2F2",
+        widget_selected = "#bed4f6",
 
         ## The color of a disabled widget face.
-        disabled = "#898989",
+        disabled = "#929292",
 
         ## The color of disabled widget text.
-        disabled_text = "#666666",
+        disabled_text = "#ababab",
 
         ## The color of informational labels.
-        label = "#c2c2c2",
+        label = "#343e4d",
 
         ## The color of a frame containing widgets.
-        frame = "#252525",
+        frame = "#d2d2d2",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#393939",
+        mm_root = "#59667a",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#393939",
+        gm_root = "#59667a",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
-        rounded_window = True,
+        rounded_window = False,
 
         ## And we're done with the theme. The theme will customize
         ## various styles, so if we want to change them, we should
@@ -276,7 +276,7 @@ init -1 python hide:
     ## Vitesse par défaut en nombre de caractères par seconde.
     ## Mettez 0 pour l'infini.
 
-    config.default_text_cps = 25
+    config.default_text_cps = 42
 
     ## Temps par défaut pour l'avancement automatique.
 
