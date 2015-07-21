@@ -2,13 +2,14 @@
 ## Ren'py
 #############
 
+# Engine stuff
 *.txt
-tmp/
-game/*.bak
-game/*.rpyb
-game/*.rpyc
+*.bak
+*.rpyb
+*.rpyc
 game/saves/
 game/cache/
+tmp/
 
 #############
 ## Windows detritus
