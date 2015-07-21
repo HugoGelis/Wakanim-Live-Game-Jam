@@ -8,6 +8,7 @@ image bg classe = "images/classe.png"
 image bg cour = "images/cour.png"
 image magical = "images/magical.png"
 image troll ="images/troll.png"
+image mecha = "images/mecha.png"
 
 # Déclarez les personnages utilisés dans le jeu.
 define JP = Character('[player_name]', color="#17c9aa")
@@ -75,7 +76,7 @@ label start:
     
     "SPROTCH" with sshake
     
-    show magical at center with move
+    show magical at center with ease
     
     "Le troll ne court qu'à sa perte lorsqu'il attaque le plat du pied de Manaka la magical kaiju girl. Il ne reste alors de l'immonde personnage qu'un petit tas de paillettes."
     
@@ -159,6 +160,8 @@ label highschool:
     
     "Monsieur Marcel" "Non pas le plafond enfin !" with sshake
     
+    show mecha with easeinbottom
+    
     "Le mecha kaiju se dresse de toute sa hauteur, défonçant le toit de la salle de TP (pourtant prévue pour accueillir humains et kaiju) au passage. Quel désastre !"
     
     Mecha "Mais quelle camelote ce truc, c'est fait en carton ou quoi ?"
@@ -207,6 +210,8 @@ label ouais:
     
     Mecha "I... Idiot* !{p}{i}*N.D.T. : ça veut dire « Baka ».{/i}"
     
+    hide mecha with easeoutleft
+    
     JP "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
     
     jump lunch
@@ -219,6 +224,8 @@ label nan:
     JP "Tu ne vaux pas mieux que ces trolls contre lesquels tu es censé te battre !" with sshake
     
     Mecha "I... Idiot* !{p}{i}*N.D.T. : ça veut dire « Baka ».{/i}"
+    
+    hide mecha with easeoutright
     
     jump lunch
 
@@ -241,7 +248,9 @@ label lunch:
     
     JP "Mais, je connais ces titans !"
     
-    show magical at right with dissolve
+    show magical at right with easeinleft
+    
+    show mecha at left with easeinright
     
     JP "Manaka ! Motoko ! Qu'est-ce que vous faites ?"
     
@@ -314,6 +323,8 @@ label generique:
     "Ce jeu a été réalisé dans le cadre d'une initiative de Wakanim Live pour montrer que tout le monde peut faire des jeux vidéo.{p}Qu'ils soit simples, stupides ou moches, c'est pas si dur de créer des trucs.{p}Alors prenez-vos dix doigts, ceux de vos copains et faisez des machins !"
     
     "Coupable : {a=https://twitter.com/hugo_gelis}Hugo Gelis{/a}{p}Page du projet sur GitHub : {a=https://github.com/HugoGelis/Wakanim-Live-Game-Jam}https://github.com/HugoGelis/Wakanim-Live-Game-Jam{/a}{p}Merci à Ben, Seiko Ralie, Joystickman et Marc-Antoine pour les bonnes idées lancées pendant le {a=https://www.youtube.com/watch?v=h9oPsSUe_ng}Wakanim Live #3{/a} !{p}Merci également à Raphaël et Astrid, les {i}partners in crime{/i} !"
+    
+    "Jeu réalisé avec Ren'py, Notepad++, Gimp, Github."
     
     "Merci d'avoir testé ce petit jeu, et à la prochaine sur {a=http://www.wakanim.tv/}Wakanim.TV{a} !"
     
