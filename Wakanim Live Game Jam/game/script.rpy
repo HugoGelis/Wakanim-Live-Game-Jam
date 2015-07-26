@@ -289,7 +289,6 @@ label lunch:
     JP "Mais, je connais ces titans !"
     
     show magical at right with easeinleft
-    
     show mecha at left with easeinright
     
     JP "Manaka ! Motoko ! Qu'est-ce que vous faites ?"
@@ -414,7 +413,9 @@ label badend:
     
     JP "Hors de ma vue ! Sur le champ ! Et que je ne vous reprenne plus à vous chamailler de la sorte ! Vauriens !"
     
-    hide magical mecha with dissolve
+    hide magical
+    hide mecha
+    with dissolve
     
     play music "sounds/badend.ogg"
     JP "Ah mais...{p}Je suis tout seul en fait."
