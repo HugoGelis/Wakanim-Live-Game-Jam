@@ -204,7 +204,7 @@ init -2 python:
 ##############################################################################
 # Navigation
 #
-# Écran inclue dans d'autres écrans pour afficher le menu jeu,  
+# Écran inclus dans d'autres écrans pour afficher le menu jeu,  
 # et le fond.
 # http://www.renpy.org/doc/html/screen_special.html#navigation
 screen navigation:

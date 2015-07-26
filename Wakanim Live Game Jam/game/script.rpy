@@ -1,21 +1,23 @@
-﻿# Vous pouvez placer le script de votre jeu dans ce fichier.
-
-# Déclarez sous cette ligne les images, avec l'instruction 'image'
+﻿#Images
 image wakalive = "images/logowakalive.png"
+image titre ="images/titre.png"
 image bg endoftheworld = "images/endoftheworld.png"
 image bg route = "images/route.png"
 image bg classe = "images/classe.png"
 image bg cour = "images/cour.png"
 image magical = "images/magical.png"
-image troll ="images/troll.png"
 image mecha = "images/mecha.png"
+image troll ="images/troll.png"
+image prof = "images/prof.png"
 
-# Déclarez les personnages utilisés dans le jeu.
-define JP = Character('[player_name]', color="#17c9aa")
-define Magical = Character('Manaka', color="#e81ae1")
-define Mecha = Character('Motoko', color="#8c8181")
-define Troll = Character('Troll péon', color="#57ac5f")
+#Personnages
+define JP = Character('[player_name]', color="#e2c756")
+define Magical = Character('Manaka', color="#f2bdc7")
+define Mecha = Character('Motoko', color="#7698b3")
+define Troll = Character('Troll péon', color="#8e4759")
+define Prof = Character('Monsieur Marcel', color="#554866")
 
+#Splashscreen
 label splashscreen:
     scene white
     with Pause(0.5)
@@ -25,33 +27,42 @@ label splashscreen:
     
     scene white with dissolve
     with Pause(0.5)
+    
+    play sound renpy.random.choice(["sounds/titrefr.ogg", "sounds/titreen.ogg", "sounds/titrejp.ogg"])
     return
 
-# Le jeu commence ici
+#Script
 label start:
 
-# Posons les variables ici
+    #Variables
     $ magical_love = "False"
     $ mecha_love = "False"
     $ sshake = Shake((0, 0, 0, 0), 1.0, dist=15)
-
-    scene bg endoftheworld
+    
+    stop sound
+    play music "sounds/intro.ogg"
+    scene bg endoftheworld with dissolve
     
     "En 2255, la Terre est menacée par l'armée du Roi des Trolls.{p}Le nouvel allié de l'humanité dans cette épreuve est des plus surprenants...{p}Personne n'aurait cru qu'après avoir détruit nos villes, mangé nos soldats et atomisé nos vies, ils se dresseraient maintenant face à nos ennemis...{p}Pour nous protéger..."
     
-    "...{p}Les kaiju.{p}{cps=0}(Sans \"s\" parce que les mots japonais sont invariables, tudieu.){/cps}"
+    "...{p}Les kaiju.{p}{cps=0}{i}(Sans \"s\" parce que les mots japonais sont invariables, tudieu.){/i}{/cps}"
     
     "Ces monstres géants, terreurs de la nature sorties du fond des temps pour venir nous rappeler nos erreurs à coup de pattes dans les grands rues...{p}Ils sont maintenant nos camarades. Godzilla, Gamera et même Mothra font partie des nôtres.{p}Plus destructeurs que des tsunamis, leur fureur se déchaînera sur nos ennemis...{p}Mais seulement après l'heure du thé et des gâteaux."
     
-    scene bg route with dissolve
+    stop music fadeout 1.0
+    play sound "sounds/jingle.ogg"
+    scene bg route with wipeleft
     
     "Moi, je ne suis qu'un simple lycéen. Aujourd'hui, comme tous les jours, je vais en cours en faisant attention de ne pas me prendre les pieds dans les débris d'immeubles et les carcasses putréfiées."
     
+    play sound "sounds/choc.ogg"
     "Aieee !" with sshake
     
+    play sound "sounds/choc.ogg"
     "Abbah !" with sshake
     
-    show troll with easeinbottom
+    play music "sounds/baston.ogg"
+    show troll with easeinleft
     
     Troll "Haha ! Je suis un vilain troll et je vais t'attaquer ! Accroche toi à ton amour propre parce que je vais te faire des remarques très désobligeantes dont tu te souviendras même aux cabinets !"
     
@@ -72,13 +83,15 @@ label start:
 
     Troll "Enfer ! C'est la plus puissante des magical kaiju girls ! Que vais-je pouvoir faire mis à part trembler des genoux en {cps=21}chargeaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANT !{/cps}"
     
-    hide troll with dissolve
-    
+    hide troll with easeoutright
+    play sound "sounds/sprotch.ogg"
     "SPROTCH" with sshake
     
-    show magical at center with ease
-    
     "Le troll ne court qu'à sa perte lorsqu'il attaque le plat du pied de Manaka la magical kaiju girl. Il ne reste alors de l'immonde personnage qu'un petit tas de paillettes."
+    
+    stop music fadeout 1.0
+    play music "sounds/magical.ogg" fadein 1.0
+    show magical at center with ease
     
     "Manaka se tourne alors vers moi."
     
@@ -88,7 +101,7 @@ label start:
     
     Magical "Oh, mon pauvre, tu as l'air bien secoué. Peux-tu au moins me dire quel est ton nom ?"
     
-    $ player_name = renpy.input("(Mince, je ne me rappelle pas mon prénom ! Ma chute m'a rendu amnésique !){p}{cps=0}{i}(Tape ton sobriquet juste en dessous, il n'y a pas de petite boîte de dialogue jolie pour ça malheureusement. Mais tu peux en faire une en récupérant {a=https://github.com/HugoGelis/Wakanim-Live-Game-Jam}le code source du jeu{/a} !){/i}{/cps}")
+    $ player_name = renpy.input("(Mince, je ne me rappelle pas mon prénom ! Ma chute m'a rendu amnésique !){p}{cps=0}{i}(Entrez votre sobriquet juste en dessous.){/i}{/cps}", default="Jean-Pierre")
     $ player_name = player_name.strip()
     $ player_name = "Jean-Pierre"
     
@@ -96,7 +109,7 @@ label start:
     
     Magical "Enchantée de faire ta connaissance... Oh, mais j'ai oublié de me présenter !"
     
-    "Un pas à gauche, trois pas à droite, une pirouette et des étincelles."
+    "Un pas à gauche, trois pas à droite, une pirouette et des étincelles..."
     
     Magical "Je suis {b}Manaka du Corbeau{/b} ! ~★ Je suis une magical kaiju girl et je veux sauver tous les humains des méchants trolls ! ❤"
         
@@ -123,12 +136,19 @@ menu:
         
 label yep:
     Magical "Super !{p}Oh, il est déjà si tard ! Vite, hâtons nous pour ne pas être en retard en cours !"
+    
     $ magical_love = "True"
+    
+    stop music fadeout 1.0
+    
     jump highschool
 
 label nope:
-
-    hide magical
+    
+    Magical "Oh... D'accord... Bien... À plus tard peut-être..."
+    
+    stop music fadeout 1.0
+    hide magical with easeoutleft
     
     JP "(Damnation ! Cette réponse que j'ai donné ! C'est une réplique digne d'une tsundere ! Ce maudit troll aurait-il réussit à me décontenancer ?)"
     
@@ -137,29 +157,41 @@ label nope:
     jump highschool
     
 label highschool:
-
-    scene bg classe with dissolve
+    
+    play music "sounds/mecha.ogg" fadein 1.0
+    play sound "sounds/jingle.ogg"
+    scene bg classe with wipeleft
     
     "Ce matin, nous avons cours de technologie avec Monsieur Marcel."
     
+    
     "La classe" "BROUHAHA. BROUHAHA."
     
-    "Monsieur Marcel" "Au travail, bande de moules ! Pour le TP d'aujourd'hui, on va plancher sur une arme pour se défendre contre les trolls.{p}Rappelez-vous, le second amendement existe uniquement pour {b}votre{/b} sécurité !"
+    show prof with easeinright
+    
+    Prof "Au travail, bande de moules ! Pour le TP d'aujourd'hui, on va plancher sur une arme pour se défendre contre les trolls.{p}Rappelez-vous, le second amendement existe uniquement pour {b}votre{/b} sécurité !"
+    
+    hide prof with easeoutleft
     
     "Nous nous mettons au travail derechef. Je fais équipe avec Jean-Claude, Jean-Paul et Jeanne-Michelle...{p}Mais dois rapidement travailler seul lorsqu'une mauvaise manipulation de la pile nucléaire irradie mes trois camarades."
     
-    "Monsieur Marcel" "Mais c'est du beau boulot ça dis donc [player_name] !"
+    show prof with easeinleft
+    
+    Prof "Mais c'est du beau boulot ça dis donc [player_name] !"
     
     JP "Merci m'sieur. Je n'en suis pas peu fier ! Un mech kaiju, ça c'est un beau TP !"
     
-    "Monsieur Marcel" "Eh bien il va être temps de l'allumer, ce maudit bestiau."
+    Prof "Eh bien il va être temps de l'allumer, ce maudit bestiau."
     
     "Je m'exécute et pèse sur le piton."
     
+    play sound "sounds/choc.ogg"
     "Rise and shine!" with sshake
     
-    "Monsieur Marcel" "Non pas le plafond enfin !" with sshake
+    Prof "Non pas le plafond enfin !{p}AH NON PAS LA TÊTE !" with sshake
     
+    play sound "sounds/choc.ogg"
+    hide prof with easeoutbottom
     show mecha with easeinbottom
     
     "Le mecha kaiju se dresse de toute sa hauteur, défonçant le toit de la salle de TP (pourtant prévue pour accueillir humains et kaiju) au passage. Quel désastre !"
@@ -182,15 +214,17 @@ label highschool:
     
     Mecha "Mes excuses, Maître. Voyez-vous, moi, je n'essaie pas de compenser la mort de mes parents en essayant de devenir un playboy millionnaire, aussi génial qu'il est talentueux."
     
-    "J'ai un mouvement de recul instinctif face à tant de vilénie. Le malotru a osé me viser de ses armes de troll anti-troll !"
+    "J'ai un mouvement de recul instinctif face à tant de vilénie. Le malotru a osé me viser de ses armes de troll anti-troll !" with sshake
     
-    JP "(Damned, le félon a touché juste avec son insulte ! Me voilà fort marri !)"
+    play sound "sounds/choc.ogg"
+    JP "(Damned, le félon a touché juste avec son insulte ! Me voilà fort marri !)" with sshake
     
-    JP "Ce... C'est... Même pas vrai ! D'abord !"
+    JP "Ce... C'est... Même pas vrai ! D'abord !" with sshake
     
     Mecha "Oh mince, je crois que je vous ai blessé. Veuillez m'excuser, Maître."
     
-    "D'un revers de queue, Motoko balaie un bâtiment situé un peu plus loin.{p}C'est (c'était) l'hôpital des adultes, de tous ceux qui survivent à peine à la post-apocalypse parce qu'ils ne sont plus de fringuants lycéens."
+    play sound "sounds/choc.ogg"
+    "D'un revers de queue, Motoko balaie un bâtiment situé un peu plus loin.{p}C'est (c'était) l'hôpital des adultes, de tous ceux qui survivent à peine à la post-apocalypse parce qu'ils ne sont plus de fringuants lycéens." with sshake
     
     Mecha "Oh, l'hôpital des adultes est détruit ! Désormais, personne dans le lycée ne pourra être plus heureux que vous car tous vos camarades sont désormais orphelins...{p}M... Mais...{p}Que ce soit bien clair entre nous...{p}J... Je...{p}Je fais pas ça parce que je vous apprécie !"
     
@@ -210,7 +244,8 @@ label ouais:
     
     Mecha "I... Idiot* !{p}{i}*N.D.T. : ça veut dire « Baka ».{/i}"
     
-    hide mecha with easeoutleft
+    stop music fadeout 1.0
+    hide mecha with easeoutright
     
     JP "(Ce n'est même pas une insulte. A-t-il baissé les armes ? Je commence à l'apprécier...)"
     
@@ -223,25 +258,30 @@ label nan:
     
     JP "Tu ne vaux pas mieux que ces trolls contre lesquels tu es censé te battre !" with sshake
     
-    Mecha "I... Idiot* !{p}{i}*N.D.T. : ça veut dire « Baka ».{/i}"
+    play sound "sounds/choc.ogg"
+    Mecha "I... Idiot* !{p}{i}*N.D.T. : ça veut dire « Baka ».{/i}" with sshake
     
+    stop music fadeout 1.0
     hide mecha with easeoutright
     
     jump lunch
 
 label lunch:
+    
+    play sound "sounds/jingle.ogg"
+    scene bg cour with wipeleft
 
-    scene bg cour
-    with dissolve
-
-    "Après ce cours de techno qui ne fut pas de tout repos arrive enfin l'heure du déjeuner."
+    "Après ce cours de techno qui n'a pas été de tout repos arrive enfin l'heure du déjeuner."
     
     JP "(Enfin un peu de tranquillité...)"
     
+    play sound "sounds/choc.ogg"
     "BOUM BOUM PAN PAN WIZZZZZ BIP BADABANG" with sshake
     
     JP "Qu'est-ce que c'est que ce vacarme ?!"
     
+    play music "sounds/baston.ogg"
+    play sound "sounds/choc.ogg"
     "BADABANG PAM BOUM BOUM PATAPRO" with sshake
     
     "De l'autre côté de la cour du lycée se déroule un combat de titans. Deux kaiju se castagnent tandis qu'à leur pied, quelques élèves humains s'échangent des barres ChocoTipTop® en guise de paris."
@@ -262,50 +302,122 @@ label lunch:
     
     Magical "Ton vocabulaire est pourtant aussi disgracieux que celui de ces êtres répugnants ! Tu es des leurs, et subiras alors mon courroux !"
     
-    Mecha "Je trolle mais pour le bien de tous ! Il s'agit d'une arme que je ne veux pas employer sur vous ! Mais si vous m'y obligez..."
+    Mecha "Je trolle mais pour le bien de tous ! Il s'agit d'une arme que je ne veux pas employer sur vous ! Mais vous m'obligez à riposter..."
     
+    play sound "sounds/choc.ogg"
     JP "{b}CESSEZ !{/b}{p}Vous vous enguirlandez pour des prunes !" with sshake
     
     "Enfin les deux kaiju entendent la voix de la raison - la mienne - et tournent la tête en ma direction."
     
-    #réécrire d'ici
+    Magical "[player_name] ?!"
     
-    Magical "[player_name] ! Tu as raison ! Notre bataille est stérile !"
+    Mecha "Maître ?! Oh, maître, excusez-moi pour cet incident."
     
-    Mecha "Maître, vous détenez la vérité."
+    Magical "Incident ?! Mais quelle façon de parler !{p}Ne l'écoute pas [player_name] ! Il essaie de t'embobiner ! Sous ses dehors de métal lustré, ce kaiju est un troll !"
     
-    Magical "Mais il va te falloir choisir..."
+    Mecha "Et sous ses atours de magical girl, elle est en fait une kaiju !" with sshake
     
-    Mecha "Qui de moi ou elle préférez-vous ?"
+    Magical "Voilà, qu'est-ce que je disais ? Ça recommence : il ne peut pas ouvrir son clapet sans caler de pique grossière !"
+    
+    Mecha "C'est du taillé sur mesure, avec les compliments de la maison. Voyez, je suis spécialisé dans le service de premier ordre très chère demoiselle."
+    
+    Magical "La plaisanterie a assez duré ! En garde !"
+    
+    "Les deux kaiju se font face, prêts à s'écharper, mais ma voix, alors fluette et tremblante, les sort de leur transe meurtrière."
+    
+    JP "Je refuse de vous voir vous chicaner de la sorte...{p}Parce que...{p}Je vous apprécie tous les deux."
+    
+    stop music fadeout 1.0
+    
+    Magical "Oh !"
+    
+    Mecha "Ah !"
+    
+    Mecha "Mais... Il y en a forcément un que vous...{cps=21}a... a-i-a-a-a-a-a-a-a...{/cps}"
+    
+    "Motoko tremble et rougit. Serait-il en train de bugger ?"
+    
+    Magical "Que tu... aimes plus que l'autre.{p}N'est-ce pas [player_name] ?"
+    
+    Mecha "O... Oui ! C'est bien ça ! Dites-nous, maître !"
     
 menu:
     JP "Mon cœur est tiraillé... Qui vais-je choisir ?"
-    "Manaka la magical kaiju girl..." if magical_love == "True":
+    "Manaka la magical kaiju girl est l'élue de mon cœur." if magical_love == "True":
         jump magicalend
-    "Motoko le mecha kaiju..." if mecha_love == "True":
+    "Motoko le mecha kaiju est sans conteste mon préféré." if mecha_love == "True":
         jump mechaend
     "Je préfère partir plutôt que de voir ça plutôt que d'être aveugle.":
         jump badend
     
 label magicalend:
     
-    "En vrai, les mechas, c'est trop nul et rien ne vaut le pouvoir magique de la tarte tropézienne."
+    JP "Motoko... Je suis désolé mais Manaka m'a ouvert les yeux...{p}En vrai, les mechas, c'est trop nul et rien ne vaut le pouvoir magique de la tarte tropézienne."
+    
+    play sound "sounds/choc.ogg"
+    Mecha "...{p}...{p}{b}B... {i}BAKA{/i} !{/b}" with sshake
+    
+    hide mecha with easeoutright
+    
+    "Je m'apprête à rattraper Motoko, le mecha que j'ai blessé en son for intérieur, mais Manaka pose sa patte sur mon épaule."
+    
+    play music "sounds/goodend.ogg"
+    show magical at center with ease
+    
+    Magical "Laisse-donc. Tu as fait ce qu'il fallait. Tu as été honnête avec toi-même et avec lui."
+    
+    JP "Oui... Tu as raison."
+    
+    Magical "Quoiqu'il en soit... Je suis heureuse que tu aies fait ton choix car je... je t'a..."
+    
+    JP "Chut... Ne dis rien..."
+    
+    "Et, de la manière la plus romantique qui soit, je lui prends la main.{p}Notre avenir est désormais scellé d'amour, de magie, de génocide de trolls et de tarte tropézienne."
     
     jump generique
 
 label mechaend:
     
-    hide magical
+    JP "Manaka... Je suis désolé mais... La technologie, c'est l'avenir. C'est pour ça que... Je préfère Motoko.{p}Les magical girl, c'est du passé. Tu dois ouvrir les yeux : on va toutes les remplacer par des mechas. Il faut te mettre à la page."
     
-    "La technologie c'est l'avenir ! On va remplacer toutes les magical girls par des mechas et botter le popotin de l'apocalypse des monstres avec d'autres monstres !"
+    play sound "sounds/choc.ogg"
+    Magical "Mais... C'est horrible ce que tu dis ! Je te déteste !" with sshake
+    
+    hide magical with easeoutleft
+    
+    "Et la magical kaiju girl s'en fut."
+    
+    play music "sounds/goodend.ogg"
+    show mecha at center with ease
+    
+    Mecha "Vous n'avez vraiment aucun tact, Maître. Mais... C'est... Ce qui fait... Votre charme..."
+    
+    JP "..."
+    
+    Mecha "Mais ! Ne vous méprenez pas ! Je ne dis pas ça parce que..."
+    
+    JP "Allons, tu peux tomber les masques, les boucliers et les lances. Tu sais bien que je vois clair dans ton jeu."
+    
+    "Motoko, sur la défensive, recule d'un pas et s'apprête à répliquer. Je ne lui en laisse pas le temps, découvrant un large sourire et éclatant d'un rire chaleureux et bon."
+    
+    JP "Si cela te gène, parlons plutôt de botter le popotin de l'apocalypse des monstres avec des monstres dans ton genre !"
+    
+    "Les yeux tout humides d'huile, Motoko me saute alors dessus et atterrit dans mes bras."
+    
+    Mecha "Baka !"
     
     jump generique
     
 label badend:
     
-    hide magical
+    JP "C'est du chantage affectif de bas étage. Jamais je n'aurai cru aucun de vous deux capable d'une telle bassesse."
     
-    JP "Ah mais... Je suis tout seul en fait."
+    JP "Hors de ma vue ! Sur le champ ! Et que je ne vous reprenne plus à vous chamailler de la sorte ! Vauriens !"
+    
+    hide magical mecha with dissolve
+    
+    play music "sounds/badend.ogg"
+    JP "Ah mais...{p}Je suis tout seul en fait."
     
     JP "C'est nul."
     
@@ -313,20 +425,18 @@ label badend:
     
     JP "Ça serait chouette si je pouvais recommencer... Ou même réécrire toute l'histoire..."
     
-    JP "Si seulement j'avais de quoi changer le code de cette réalité en open source..."
-    
     jump generique
     
 label generique:
-    scene wakalive
+    
+    stop music fadeout 1.0
+    scene titre with dissolve
 
-    "Ce jeu a été réalisé dans le cadre d'une initiative de Wakanim Live pour montrer que tout le monde peut faire des jeux vidéo.{p}Qu'ils soit simples, stupides ou moches, c'est pas si dur de créer des trucs.{p}Alors prenez-vos dix doigts, ceux de vos copains et faisez des machins !"
+    "{cps=0}Ce jeu a été réalisé dans le cadre d'une initiative de {a=https://www.youtube.com/channel/UCxn60qFxv4Xzh6dlqlVTwYg}Wakanim Live{/a} pour montrer que tout le monde peut faire des jeux vidéo.{p}Qu'ils soit simples, stupides ou moches, c'est pas si dur de créer des trucs.{p}Alors prenez-vos dix doigts, ceux de vos copains et faisez des machins !{/cps}"
     
-    "Coupable : {a=https://twitter.com/hugo_gelis}Hugo Gelis{/a}{p}Page du projet sur GitHub : {a=https://github.com/HugoGelis/Wakanim-Live-Game-Jam}https://github.com/HugoGelis/Wakanim-Live-Game-Jam{/a}{p}Merci à Ben, Seiko Ralie, Joystickman et Marc-Antoine pour les bonnes idées lancées pendant le {a=https://www.youtube.com/watch?v=h9oPsSUe_ng}Wakanim Live #3{/a} !{p}Merci également à Raphaël et Astrid, les {i}partners in crime{/i} !"
+    "{cps=0}{i}Kawaii★Kaiju Love❤Love{/i} est un jeu de {a=https://twitter.com/hugo_gelis}Hugo Gelis{/a} disponible en {a=https://github.com/HugoGelis/Wakanim-Live-Game-Jam}open source{/a}.{p}Merci à Ben, Seiko Ralie, Joystickman et Marc-Antoine pour les bonnes idées lancées pendant le {a=https://www.youtube.com/watch?v=h9oPsSUe_ng}Wakanim Live #3{/a} !{p}Et surtout merci aux meilleurs {i}partners in crime{/i} : {a=https://twitter.com/RaphaelBuniet}Raphaël{/a} et Astrid !{/cps}"
     
-    "Jeu réalisé avec Ren'py, Notepad++, Gimp, Github."
+    "{cps=0}{b}Crédits{/b}{p}Explosions : {a=http://www.navy.mil/view_image.asp?id=2227}l'armée américaine{/a}{p}Musique : {a=http://www.rickymakesmusic.com/}Ricky Rangel Jr.{/a}{p}Inspiration divine : l'épisode 4 d'Excel Saga{p}Jeu réalisé avec {a=http://www.renpy.org/}Ren'py{/a}, {a=https://notepad-plus-plus.org/}Notepad++{/a}, {a=http://www.gimp.org/}Gimp{/a}, {a=http://audacityteam.org/}Audacity{/a} et {a=https://github.com/}Github{/a}.{/cps}"
     
-    "Merci d'avoir testé ce petit jeu, et à la prochaine sur {a=http://www.wakanim.tv/}Wakanim.TV{a} !"
-    
-    "#bagarre{p}★~FIN~★"
-    return
+    "{cps=0}Merci d'avoir testé ce petit jeu, et à la prochaine !{p}#bagarre{p}★~FIN~★{/cps}"
+    jump splashscreen

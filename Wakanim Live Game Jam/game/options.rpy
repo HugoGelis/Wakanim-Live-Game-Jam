@@ -7,7 +7,7 @@
 ## commenté, vous pouvez les décommenter pour les utiliser.
 
 init -1 python hide:
-
+    
     ## Cette option devrait être passé à False avant la distribution
     ## du jeu, ainsi le joueur ne peut pas tricher en utilisant les
     ## outils pour développeur.
@@ -21,12 +21,12 @@ init -1 python hide:
 
     ## Titre de la fenêtre (lorsque le jeu se fait en mode fenêtré).
 
-    config.window_title = u"Kawaii Kaiju Love Love"
+    config.window_title = u"Kawaii★Kaiju Love❤Love"
 
     ## Contrôle le nom et la version du jeu; qui apparaîtront dans les
     ## fichiers de débogage.
-    config.name = "WakanimLiveGameJam"
-    config.version = "0.1"
+    config.name = "KawaiiKaijuLoveLove"
+    config.version = "1.0"
 
     #########################################
     ## Thèmes
@@ -40,46 +40,46 @@ init -1 python hide:
 
     theme.roundrect(
         ## Theme: Roundrect
-        ## Color scheme: Phone Operator
+        ## Color scheme: Unrequited Love
 
         ## The color of an idle widget face.
-        widget = "#59667a",
+        widget = "#7fa1b3",
 
         ## The color of a focused widget face.
-        widget_hover = "#343e4d",
+        widget_hover = "#b38698",
 
         ## The color of the text in a widget.
         widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#bed4f6",
+        widget_selected = "#fffeed",
 
         ## The color of a disabled widget face.
-        disabled = "#929292",
+        disabled = "#dbe4dd",
 
         ## The color of disabled widget text.
-        disabled_text = "#ababab",
+        disabled_text = "#bd9ca9",
 
         ## The color of informational labels.
-        label = "#343e4d",
+        label = "#23000e",
 
         ## The color of a frame containing widgets.
-        frame = "#d2d2d2",
+        frame = "#fffeed",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#59667a",
+        mm_root = "images/titre.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#59667a",
+        gm_root = "images/titre.png",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
-        rounded_window = False,
+        rounded_window = True,
 
         ## And we're done with the theme. The theme will customize
         ## various styles, so if we want to change them, we should
@@ -156,11 +156,11 @@ init -1 python hide:
 
     ## Mettez cette option à False pour désactiver les sons.
 
-    config.has_sound = False
+    config.has_sound = True
 
     ## Mettez cette option à False si le jeu n'a pas de musique.
 
-    config.has_music = False
+    config.has_music = True
 
     ## Mettez cette option à True si le jeu contient des voix.
 
@@ -182,7 +182,7 @@ init -1 python hide:
 
     ## Musique jouée lorsque le joueur se trouve dans le menu principal.
 
-    # config.main_menu_music = "main_menu_theme.ogg"
+    # config.main_menu_music = "click.wav"
 
 
     #########################################
@@ -259,7 +259,7 @@ init -1 python hide:
     ## nécessaire que cela soit indiqué tôt, avant tout autre code
     ## d'initiation.)
 python early:
-    config.save_directory = "Wakanim Live Game Jam-1434703522"
+    config.save_directory = "KawaiiKaijuLoveLove"
 
 init -1 python hide:
     #########################################
@@ -293,7 +293,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "KawaiiKaijuLoveLove-0.1"
+    build.directory_name = "KawaiiKaijuLoveLove-1.0"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
@@ -348,4 +348,3 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-    

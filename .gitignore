@@ -62,8 +62,12 @@ pip-log.txt
 
 
 #############
-## Graphisme
+## Graphisme & son
 #############
 
 #Gimp
 *.xcf
+
+#Audacity
+*.aup
+*.au
